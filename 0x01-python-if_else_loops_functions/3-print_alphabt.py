@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for i in range(26):
-    if chr(i + 97) not in "qe":
-        print(f"{chr(i + 97)}", end="")
+for i in range(97, 123):
+    if i != 101 and i != 113:
+        print(f"{chr(i)}", end='')
