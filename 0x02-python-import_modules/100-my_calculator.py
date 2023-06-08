@@ -19,6 +19,6 @@ if __name__ == "__main__":
     }
     a = int(argv[1])
     b = int(argv[3])
-    op = int(argv[2])
+    op = argv[2]
 
     print("{} {} {} = {}".format(a, op, b, o[op](a, b)))
