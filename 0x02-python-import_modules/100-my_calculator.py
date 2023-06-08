@@ -17,8 +17,8 @@ if __name__ == "__main__":
         "*": mul,
         "/": div
     }
-    a = argv[1]
-    b = argv[3]
+    a = int(argv[1])
+    b = int(argv[3])
     op = argv[2]
 
     print("{} {} {} = {}".format(a, op, b, o[op](a, b)))
