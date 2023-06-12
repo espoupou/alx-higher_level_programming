@@ -98,15 +98,6 @@ int is_palindrome(listint_t **head)
 		}
 
 		prev->next = h2;
-		/* if (middle != NULL)
-		{
-			prev_slow->next = middle;
-			middle->next = scn_half;
-		}
-		else
-		{
-			prev_slow->next = scn_half;
-		} */
 	}
 
 	return (k);
