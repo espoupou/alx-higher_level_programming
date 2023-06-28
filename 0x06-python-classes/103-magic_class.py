@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """magic class file
 """
+
 import math
 
 
