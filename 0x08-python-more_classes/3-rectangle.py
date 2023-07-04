@@ -75,6 +75,9 @@ class Rectangle:
         """class string
         """
         string = ""
+        if self.width == 0 or self.height == 0:
+            return string
+
         for i in range(self.__height):
             for j in range(self.__width):
                 string += "#"
