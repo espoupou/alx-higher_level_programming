@@ -2,7 +2,7 @@
 """Module of list copy
 """
 
-def copy_list(l):
+def copy_list(lis):
     """copy list function
     """
-    return l.copy()
+    return lis.copy()
