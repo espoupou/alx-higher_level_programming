@@ -3,7 +3,7 @@
 """
 
 
-def copy_list(lis):
+def copy_list(l):
     """copy list function
     """
-    return lis.copy()
+    return l.copy()
