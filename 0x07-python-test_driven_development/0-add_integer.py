@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Module for add function
+""" Module for add function
 """
 
 
 def add_integer(a, b=98):
-    """Add function
+    """ Add function
 
        Args:
           a (int): first number
