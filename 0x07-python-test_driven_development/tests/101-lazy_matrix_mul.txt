@@ -95,3 +95,43 @@ Passing a matrix with a list of strings
     ValueError: shapes (2,3) and (2,1) not aligned: 3 (dim 1) != 2 (dim 0)
 
 Passing a matrix with a list of strings 2
+
+    >>> matrix_mul([[2, 4, 6], [3, 6, 9]], [[1], ['2'], [3]])
+    Traceback (most recent call last):
+    	      ...
+    TypeError: invalid data type for einsum
+
+Passing a matrix with an empty list
+
+    >>> matrix_mul([[12, 12, 12], [], [14, 14, 14]], [[2], [3], [8]])
+    Traceback (most recent call last):
+    	      ...
+    ValueError: setting an array element with a sequence.
+
+Passing a matrix which its rows have different size
+
+    >>> matrix_mul([[2, 2, 2], [4, 4, 4]], [[2], [3, 3]])
+    Traceback (most recent call last):
+    	      ...
+    ValueError: setting an array element with a sequence.
+
+Passing two matrix that can't be multiplied
+
+    >>> matrix_mul([[5, 2, 3], [7, 13, 2], [1, 0, 3]], [[2, 3], [6, 9]])
+    Traceback (most recent call last):
+    	      ...
+    ValueError: shapes (3,3) and (2,2) not aligned: 3 (dim 1) != 2 (dim 0)
+
+Missing one argument
+
+    >>> matrix_mul([[1, 2]])
+    Traceback (most recent call last):
+    	            ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+Missing arguments
+
+    >>> matrix_mul()
+    Traceback (most recent call last):
+    	            ...
+    TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
