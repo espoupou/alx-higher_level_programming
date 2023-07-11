@@ -2,6 +2,7 @@
 """ Empty class def
 """
 
+
 class BaseGeometry:
     """ Empty class """
     pass
