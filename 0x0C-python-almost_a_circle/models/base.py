@@ -80,10 +80,6 @@ class Base:
         except IOError:
             return []
 
-    def update(self, *args, **kwargs):
-        """ update method """
-        pass
-
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """ Method that saves a CSV file """
