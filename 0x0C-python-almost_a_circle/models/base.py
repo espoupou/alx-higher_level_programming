@@ -140,11 +140,9 @@ class Base:
     def draw(list_rectangles, list_squares):
         """Draw Rectangles and Squares using the turtle module """
         turt = turtle.Turtle()
-        turt.screen.bgcolor("#b7312c")
         turt.pensize(3)
-        turt.shape("turtle")
 
-        turt.color("#ff0000")
+        turt.color("#0000ff")
         for rect in list_rectangles:
             turt.showturtle()
             turt.up()
@@ -157,7 +155,6 @@ class Base:
                 turt.left(90)
             turt.hideturtle()
 
-        turt.color("#b5e3d8")
         for sq in list_squares:
             turt.showturtle()
             turt.up()
