@@ -75,7 +75,8 @@ class Base:
 
             for index in range(len(list_cls)):
                 list_ins.append(cls.create(**list_cls[index]))
-            return list_ins        
+            return list_ins
+
         except IOError:
             return []
 
@@ -102,7 +103,7 @@ class Base:
 
         if os.path.exists(filename) is False:
             return []
-        
+
         try:
             with open(filename, 'r') as readFile:
                 reader = csv.reader(readFile)
