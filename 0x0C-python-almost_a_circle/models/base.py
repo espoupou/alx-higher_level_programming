@@ -52,13 +52,12 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ Create an instance """
-        if cls.__name__ == "Rectangle":
-            new = cls(10, 10)
+        if cls.__name__ is 'Square':
+            instance = cls(1)
         else:
-            new = cls(10)
-        if cls.__name__ != "Base":
-            new.update(**dictionary)
-        return new
+            instance = cls(1, 1)
+        instance.update(**dictionary)
+        return instance
 
     @classmethod
     def load_from_file(cls):
