@@ -56,7 +56,8 @@ class Base:
             new = cls(10, 10)
         else:
             new = cls(10)
-        new.update(**dictionary)
+        if cls.__name__ != "Base":
+            new.update(**dictionary)
         return new
 
     @classmethod
