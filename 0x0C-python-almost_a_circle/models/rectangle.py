@@ -114,7 +114,10 @@ class Rectangle(Base):
         if args is not None and len(args) != 0:
             atribs = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
-                setattr(self, atribs[i], args[i])
+                try:
+                    setattr(self, atribs[i], args[i])
+                except IndexError:
+                    pass
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
