@@ -34,11 +34,14 @@ class Square(Rectangle):
         if args is not None and len(args) != 0:
             list_atr = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
-                if list_atr[i] == 'size':
-                    setattr(self, 'width', args[i])
-                    setattr(self, 'height', args[i])
-                else:
-                    setattr(self, list_atr[i], args[i])
+                try:
+                    if list_atr[i] == 'size':
+                        setattr(self, 'width', args[i])
+                        setattr(self, 'height', args[i])
+                    else:
+                        setattr(self, list_atr[i], args[i])
+                except IndexError:
+                    pass
         else:
             for key, value in kwargs.items():
                 if key == 'size':
