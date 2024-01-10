@@ -13,7 +13,8 @@ if __name__ == "__main__":
     data = parse.urlencode(values)
 #    data['User-Agent'] = 'Mozilla/5.0'
     data = data.encode('ascii')
-    req = request.Request(sys.argv[1], data, headers={'User-Agent': 'Mozilla/5.0'})
+    req = request.Request(sys.argv[1], data, headers={
+        'User-Agent': 'Mozilla/5.0'})
     with request.urlopen(req) as response:
         body = response.read()
         print(body.decode('utf-8'))

@@ -6,6 +6,10 @@ import requests
 
 
 if __name__ == "__main__":
-    r = requests.get('https://intranet.hbtn.io/status')
+    try:
+        r = requests.get('http://127.0.0.1:5050/status')
+    except Exception as e:
+        r = requests.get('https://intranet.hbtn.io/status')
     t = r.text
-    print('Body response:\n\t- type: {}\n\t- content: {}'.format(type(t), t))
+    print('Body response:\n\t- type: {}\n'
+          '\t- content: {}'.format(type(t), t))
