@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const $ = window.$;
-$('DIV#red_header').click(function () {
+$('DIV#toggle_header').click(function () {
   if ($('HEADER').hasClass('green')) {
     $('HEADER').removeClass('green');
     $('HEADER').addClass('red');
